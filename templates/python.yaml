@@ -1,0 +1,17 @@
+dockerfile: |
+    # Official Python image
+    FROM python:3.9-slim
+
+    # Set working directory
+    WORKDIR /app
+
+    # Copy the source code
+    COPY . .
+
+    # Install dependencies
+    RUN if [ -f requirements.txt ]; then \
+        pip install -r requirements.txt; \
+    fi
+
+    # Run the application
+    CMD ["python", "%s"]
