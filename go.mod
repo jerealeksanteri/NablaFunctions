@@ -2,7 +2,10 @@ module NablaFunctions
 
 go 1.23.5
 
-require github.com/rs/zerolog v1.33.0
+require (
+	github.com/rs/zerolog v1.33.0
+	gopkg.in/yaml.v3 v3.0.1
+)
 
 require (
 	github.com/mattn/go-colorable v0.1.13 // indirect

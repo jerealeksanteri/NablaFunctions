@@ -23,6 +23,7 @@ func CleanupTemporaryDirectory(dir string) error {
 		log.Info().Msgf("Failed to remove temporary directory: %v\n", err)
 
 	}
+	return err
 }
 
 // SaveZipFile saves a zip file to a temporary directory.
@@ -153,5 +154,5 @@ func DetectHandlerFile(dir string) (string, string, error) {
 	}
 
 	// Return an error if no handler file was found
-	return "", "", fmt.Errorf("No handler file found")
+	return "", "", fmt.Errorf("no handler file found")
 }
