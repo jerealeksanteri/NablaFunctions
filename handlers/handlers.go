@@ -128,7 +128,7 @@ func ExecuteHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Send the output back to the client
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(fmt.Sprintf("Output: \n %s", output)))
+	w.Write([]byte(fmt.Sprint(output)))
 
 }
 
