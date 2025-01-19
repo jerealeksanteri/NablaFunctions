@@ -1,19 +1,18 @@
 package utils
 
 import (
-	"os"
+	"archive/zip"
 	"fmt"
 	"io"
-	log "github.com/rs/zerolog"
-	"archive/zip"
+	"os"
 	"path/filepath"
+
+	log "github.com/rs/zerolog/log"
 )
 
 // CreateTemporaryDirectory creates a temporary directory.
 func CreateTemporaryDirectory() (string, error) {
 	return os.MkdirTemp("", "zip-extract")
-
-
 }
 
 // CleanupTemporaryDirectory removes a temporary directory.
@@ -79,7 +78,7 @@ func ExtractZipFile(zipFile, tempDir string) (string, error) {
 	for _, file := range reader.File {
 		// Open the file inside the zip
 		path := filepath.Join(extractDir, file.Name)
-		
+
 		// Create the directory if it doesn't exist
 		if file.FileInfo().IsDir() {
 			err1 := os.MkdirAll(path, file.Mode())
@@ -93,7 +92,7 @@ func ExtractZipFile(zipFile, tempDir string) (string, error) {
 		// Create the file
 		outfile, err1 := os.OpenFile(path, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, file.Mode())
 		if err1 != nil {
-			log.Info().Msgf("Failed to open file: %v\n", err1)
+			log.Error().Msgf("Failed to open file: %v", err1)
 			return "", err1
 		}
 
@@ -118,7 +117,7 @@ func ExtractZipFile(zipFile, tempDir string) (string, error) {
 		}
 
 	}
-	
+
 	// Return the directory where the files were extracted
 	return extractDir, nil
 }
@@ -126,8 +125,8 @@ func ExtractZipFile(zipFile, tempDir string) (string, error) {
 // DetectHandlerFile detects the handler file in a directory.
 // It returns the name of the handler file and the language.
 // The supported languages are "python" and "golang".
-func DetectHandlerFile(dir string) (string, error) {
-	
+func DetectHandlerFile(dir string) (string, string, error) {
+
 	// Read the directory
 	files, err := os.ReadDir(dir)
 
@@ -142,7 +141,7 @@ func DetectHandlerFile(dir string) (string, error) {
 		if file.IsDir() {
 			continue
 		}
-		
+
 		// Switch statement to check the file extension
 		switch filepath.Ext(file.Name()) {
 		case ".py":

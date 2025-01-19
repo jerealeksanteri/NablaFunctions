@@ -1,8 +1,7 @@
 package main
 
 import (
-	"fmt",
-	utils "utils/utils"
+	"fmt"
 )
 
 func main() {
