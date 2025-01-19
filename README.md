@@ -2,7 +2,7 @@
 
 ## Introduction
 This is a Golang HTTP Server project, which mocks AWS Lambda Functions. It uses docker images as functions. Docker containers are launched when the function is called.
-Currently it supports only Golang and Python projects. Heavily influenced by https://www.youtube.com/@helloWorldGolang
+Currently it supports only Golang and Python projects. 
 
 ## Usage
 The server has two endpoint load and execute.
@@ -32,3 +32,5 @@ The endpoint will output the functions output.
 ![NablaFunctions](https://github.com/user-attachments/assets/c054bd96-bd50-4e1c-8256-37b69be22967)
 
 
+#### Credits
+Heavily influenced by https://www.youtube.com/@helloWorldGolang
