@@ -8,6 +8,7 @@ Currently it supports only Golang and Python projects. Heavily influenced by htt
 The server has two endpoint load and execute.
 
 ### ZipFile
+The directory should have its "main" -file. The program doesnt recognize start file without it.
 
 ### Endpoints
 
