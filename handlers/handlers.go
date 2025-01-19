@@ -80,6 +80,7 @@ func LoadHandler(w http.ResponseWriter, r *http.Request) {
 	// Build the Docker image
 	imageId, err := docker.BuildDockerImage(extractDir, language, filename)
 	if err != nil {
+		log.Error().Err(err).Msgf("Unable to build docker Image")
 		http.Error(w, "Unable to build Docker image", http.StatusInternalServerError)
 		return
 	}
@@ -120,6 +121,7 @@ func ExecuteHandler(w http.ResponseWriter, r *http.Request) {
 	// Run the Docker container
 	output, err := docker.RunDockerContainer(imageId)
 	if err != nil {
+		log.Error().Err(err).Msg("Unable to run Docker container")
 		http.Error(w, "Unable to run Docker container", http.StatusInternalServerError)
 		return
 	}

@@ -52,7 +52,7 @@ func BuildDockerImage(dir, language, handlerFile string) (string, error) {
 	}
 
 	// Build the Docker image
-	imageTag := fmt.Sprintf("NablaFunction:%s", language)
+	imageTag := fmt.Sprintf("nablafunctions:%s", language)
 	cmd := exec.Command("docker", "build", "-t", imageTag, dir)
 
 	// Combine the output
@@ -82,7 +82,7 @@ func ExtractImageID(s string) (string, error) {
 	for _, line := range lines {
 
 		// Writing the image on line sha256, so we can extract the image ID
-		if strings.Contains(line, "writing image sha256") {
+		if strings.Contains(line, "manifest list sha256") {
 
 			// Split the line by spaces
 			parts := strings.Fields(line)
