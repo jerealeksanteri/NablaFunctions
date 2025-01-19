@@ -80,22 +80,22 @@
         <mxCell id="_FdeFcUcCdS8H701f3TN-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="dNxyNK7c78bLwvsdeMH5-22" source="_FdeFcUcCdS8H701f3TN-12" target="_FdeFcUcCdS8H701f3TN-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="_FdeFcUcCdS8H701f3TN-8" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Build Docker Image&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="dNxyNK7c78bLwvsdeMH5-22">
+          <mxGeometry x="510" y="30" width="80" height="60" as="geometry" />
+        </mxCell>
         <mxCell id="_FdeFcUcCdS8H701f3TN-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="dNxyNK7c78bLwvsdeMH5-19" source="_FdeFcUcCdS8H701f3TN-17" target="_FdeFcUcCdS8H701f3TN-19">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="_FdeFcUcCdS8H701f3TN-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="dNxyNK7c78bLwvsdeMH5-19" source="_FdeFcUcCdS8H701f3TN-14" target="_FdeFcUcCdS8H701f3TN-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="_FdeFcUcCdS8H701f3TN-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="dNxyNK7c78bLwvsdeMH5-19" source="_FdeFcUcCdS8H701f3TN-5" target="_FdeFcUcCdS8H701f3TN-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="_FdeFcUcCdS8H701f3TN-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_FdeFcUcCdS8H701f3TN-8" target="_FdeFcUcCdS8H701f3TN-10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_FdeFcUcCdS8H701f3TN-8" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Build Docker Image&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="1">
-          <mxGeometry x="650" y="270" width="80" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="_FdeFcUcCdS8H701f3TN-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_FdeFcUcCdS8H701f3TN-5" target="_FdeFcUcCdS8H701f3TN-8">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="_FdeFcUcCdS8H701f3TN-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_FdeFcUcCdS8H701f3TN-10" target="_FdeFcUcCdS8H701f3TN-12">
+        <mxCell id="_FdeFcUcCdS8H701f3TN-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.036;entryY=0.489;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_FdeFcUcCdS8H701f3TN-10" target="_FdeFcUcCdS8H701f3TN-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="_FdeFcUcCdS8H701f3TN-10" value="&lt;font color=&quot;#ffffff&quot;&gt;Save the Image ID&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="1">
