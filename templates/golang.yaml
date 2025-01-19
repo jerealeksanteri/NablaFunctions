@@ -1,0 +1,40 @@
+dockerfile: |
+    # Official Golang image
+    FROM golang:1.19 AS builder
+
+    WORKDIR /app
+  
+    # Check if go.mod exists and enable modules
+        RUN if [ -f go.mod ]; then \
+            echo "Go modules found, enabling modules"; \
+            export GO111MODULE=on; \
+            go mod download; \
+        ELSE \
+            echo "Go modules not found"; \
+            export GO111MODULE=off; \
+        fi
+
+        # Set GO111MODULE to on globally for subsequent commands
+        ENV GO111MODULE=${GO111MODULE:-off}
+
+    # Copy the source code
+    COPY . .
+
+    # Build the application
+    RUN go build -o handler .
+
+    # Minimal base image
+    FROM debian:buster-slim
+
+    # Set working directory
+    WORKDIR /app
+
+    # Copy the binary from the builder image
+    COPY --from=builder /app/handler .
+
+    # Make the binary executable
+    RUN chmod +x handler
+
+    # Run the application
+    CMD ["./handler"]
+
