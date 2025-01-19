@@ -1,9 +1,8 @@
 run:
 	go run main.go
 
-submit:
-	curl -X POST -F "code=@(zip_file)" http://localhost:8080/api/submit
+load:
+	curl -X POST -F "code=@(zip_file)" http://localhost:8080/api/load
 
 execute:
-	curl http://localhost:8080/api/execute?\fn\=$(fn)
-	
+	curl http://localhost:8080/api/execute?\functionId\=$(fn)

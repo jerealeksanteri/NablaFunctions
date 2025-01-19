@@ -126,6 +126,8 @@ func ExtractZipFile(zipFile, tempDir string) (string, error) {
 // DetectHandlerFile detects the handler file in a directory.
 // It returns the name of the handler file and the language.
 // The supported languages are "python" and "golang".
+// The dir parameter is the directory to search.
+// It returns an error if no handler file is found.
 func DetectHandlerFile(dir string) (string, string, error) {
 
 	// Read the directory
