@@ -32,5 +32,3 @@ The endpoint will output the functions output.
 ![NablaFunctions](https://github.com/user-attachments/assets/c054bd96-bd50-4e1c-8256-37b69be22967)
 
 
-#### Credits
-Heavily influenced by https://www.youtube.com/@helloWorldGolang
